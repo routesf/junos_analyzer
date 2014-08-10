@@ -2,8 +2,8 @@
 - SYNOPSIS
 - DESCRIPTION
 - EXAMPLE
-- 1. Example 1, without -v option
-- 2. Example 2, with -v option
+  1. Example 1, without -v option
+  2. Example 2, with -v option
 - AUTHOR
 - BUGS AND IRRITATIONS
 
@@ -16,7 +16,7 @@
 
  Run this script on Linux with Perl5.10+
 ``` 
- [mzhou@ipg-lnx-shell1 ~]$ ~mzhou/analyze_cfg.pl -h
+ [mzhou@centos6.5 ~]$ ~mzhou/analyze_cfg.pl -h
  NAME
  	analyze_cfg.pl - Analyze the configuration file to summarize it as a human-readable summary
  
@@ -157,10 +157,10 @@
 ### Example 1, without -v option
 
 ```
- [mzhou@ipg-lnx-shell1 ~]$ ~mzhou/analyze_cfg.pl -c ~mzhou/cfg_example/att_107
+ [mzhou@centos6.5 ~]$ ~mzhou/analyze_cfg.pl -c ~mzhou/cfg_example/junos_1.cfg
  Start at Tue Oct 29 01:25:38 2013
- Analyze att_107... 
- 12 first level items found, saved in results/att_107d
+ Analyze junos_1.cfg... 
+ 12 first level items found, saved in results/junos_1.cfgd
  routing-instances, event-options, system, applications, snmp, interfaces, routing-options, policy-options, firewall, security, groups, chassis
  == summary ==
  ====================================================================================================
@@ -227,9 +227,9 @@
  Total spent: 0 wallclock secs ( 0.02 usr +  0.00 sys =  0.02 CPU)
  
  The separated configs have been saved on below directory
- [mzhou@ipg-lnx-shell1 ~]$ ls results/
- att_107d
- [mzhou@ipg-lnx-shell1 ~]$ ll results/att_107d/
+ [mzhou@centos6.5 ~]$ ls results/
+ junos_1.cfgd
+ [mzhou@centos6.5 ~]$ ll results/junos_1.cfgd/
  total 48
  drwxr-xr-x    2 mzhou    test-tech1     4096 Oct 30 23:46 applications
  drwxr-xr-x    2 mzhou    test-tech1     4096 Oct 30 23:46 chassis
@@ -243,7 +243,7 @@
  drwxr-xr-x    2 mzhou    test-tech1     4096 Oct 30 23:46 security
  drwxr-xr-x    2 mzhou    test-tech1     4096 Oct 30 23:46 snmp
  drwxr-xr-x    2 mzhou    test-tech1     4096 Oct 30 23:46 system
- [mzhou@ipg-lnx-shell1 ~]$ ll results/att_107d/routing-instances/
+ [mzhou@centos6.5 ~]$ ll results/junos_1.cfgd/routing-instances/
  total 12
  -rw-r--r--    1 mzhou    test-tech1      654 Oct 30 23:46 DMZ-VR
  -rw-r--r--    1 mzhou    test-tech1      416 Oct 30 23:46 MOBILE-VR
@@ -253,10 +253,10 @@
 ### Example 2, with -v option
 
 ```
- [mzhou@ipg-lnx-shell1 ~]$ ~mzhou/analyze_cfg.pl -c ~mzhou/cfg_example/att_107 -v
+ [mzhou@centos6.5 ~]$ ~mzhou/analyze_cfg.pl -c ~mzhou/cfg_example/junos_1.cfg -v
  Start at Mon Oct 28 23:57:30 2013
- Analyze att_107... 
- 12 first level items found, saved in results/att_107d
+ Analyze junos_1.cfg... 
+ 12 first level items found, saved in results/junos_1.cfgd
  routing-instances, event-options, system, applications, snmp, interfaces, routing-options, policy-options, firewall, security, groups, chassis
  == summary ==
  ====================================================================================================
